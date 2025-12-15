@@ -1,0 +1,314 @@
+.database-page {
+  padding: 30px;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  min-height: 100vh;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.database-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Grid with 4 columns and consistent spacing */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* Card style */
+.screenshot-card {
+  background-color: #1e2a38;
+  border: 1px solid #3e5468;
+  border-radius: 10px;
+  padding: 15px;
+  width: 240px;
+  transition: transform 0.2s ease;
+}
+
+.screenshot-card:hover {
+  transform: scale(1.05);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.screenshot-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Date filter */
+.datepicker-wrapper {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.react-datepicker-wrapper input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Pagination section */
+.pagination-controls {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination-controls button {
+  background: linear-gradient(135deg, #00c3ff, #0066ff);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.pagination-controls button:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Zoom Modal */
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.zoom-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 auto 15px auto;
+  transition: background 0.2s;
+  line-height: 1;
+  padding: 0;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.delete-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #ff4e50, #f36d3d);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #d63031, #e17055);
+}
+
+/* Custom Delete Confirmation Modal */
+.delete-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.delete-box {
+  background-color: #ffffff; /* White box */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.delete-box p {
+  margin-bottom: 20px;
+  color: #333; /* Dark text on white */
+  font-size: 16px;
+}
+
+.delete-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancel-btn,
+.confirm-delete-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #7f8c8d;
+  color: white;
+}
+
+.confirm-delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #95a5a6;
+}
+
+.confirm-delete-btn:hover {
+  background: #c0392b;
+}
+
+.success-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fadein 0.3s ease, fadeout 0.3s ease 1.7s;
+  z-index: 3000;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(20px); }
+}
+
+/* Summary Chart Box */
+.charts-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.chart-box {
+  background-color: rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 100%;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.chart-box h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.options-wrapper {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+}
+
+.options-wrapper .dropdown-box {
+  position: absolute;
+  top: 45px; /* Adjust to drop below the button */
+  right: 0;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.options-wrapper select,
+.options-wrapper input {
+  margin-top: 5px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  background: white;
+  color: #333;
+  font-size: 14px;
+}
+
