@@ -52,8 +52,8 @@ Database
 
 
 Backend 1: Flask (AI Server)
-pip install -r requirements.txt
-python detect.py
+- pip install -r requirements.txt
+- python detect.py
 
 Runs on:
 http://localhost:5001
