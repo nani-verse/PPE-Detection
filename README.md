@@ -21,9 +21,9 @@ Detected violations are captured, stored, and displayed through a monitoring das
 
 The system follows a microservices architecture with two independent backend services:
 
--> Flask (Python) Backend:
+- Flask (Python) Backend:
 Handles live camera input, AI inference, PPE violation detection, and video streaming.
--> Node.js (Express) Backend:
+- Node.js (Express) Backend:
 Manages data storage, REST APIs, and communication with the frontend using MongoDB.
 
 The frontend is built using React.js for real-time monitoring
@@ -31,24 +31,24 @@ The frontend is built using React.js for real-time monitoring
 
 🧰 Tech Stack
 
-Frontend
+1. Frontend
 
-1. React.js
-2. HTML, CSS, JavaScript
+- React.js
+-  HTML, CSS, JavaScript
 
-Backend
+2. Backend
 
-1. Flask (Python) – AI inference & video streaming
-2. Node.js & Express – REST APIs & data management
+- Flask (Python) – AI inference & video streaming
+- Node.js & Express – REST APIs & data management
 
-AI & Computer Vision
+3. AI & Computer Vision
 
-1.YOLOv8 (Ultralytics) – PPE and person detection
-2. OpenCV – Camera and video processing
+- YOLOv8 (Ultralytics) – PPE and person detection
+-  OpenCV – Camera and video processing
 
-Database
+4. Database
 
-1. MongoDB – Violation image and metadata storage
+- MongoDB – Violation image and metadata storage
 
 
 Backend 1: Flask (AI Server)
@@ -60,15 +60,15 @@ http://localhost:5001
 
 
 Backend 2: Node.js (Data Server)
-npm install
-node index.js
+- npm install
+- node index.js
 
 Runs on:
 http://localhost:5000
 
 Frontend
-npm install
-npm start
+- npm install
+- npm start
 
 Runs on:
 http://localhost:3000
